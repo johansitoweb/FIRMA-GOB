@@ -1,0 +1,667 @@
+/* Variables de color (ajustadas para la nueva vista) */
+:root {
+    --primary-blue: #007bff; /* Azul para botones, enlaces, algunos textos */
+    --dark-blue-header: #003366; /* Azul oscuro para header y footer */
+    --light-gray-bg: #f8f8f8; /* Fondo general claro */
+    --text-color-dark: #333;
+    --text-color-light: #fff;
+    --green-accent: #4CAF50; /* Verde de la tarjeta de beneficios */
+    --orange-accent: #FF9800; /* Naranja/Amarillo de la tarjeta de diagrama */
+    --card-border-light: #e0e0e0; /* Borde claro de las tarjetas */
+    --button-hover-blue: #0056b3;
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--light-gray-bg);
+    color: var(--text-color-dark);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--button-hover-blue);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* -------------------- Header -------------------- */
+.service-header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.service-main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.service-logo-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.service-logo-ogtic {
+    height: 40px; /* Ajusta el tamaño */
+}
+
+.service-nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.service-nav-links ul li a {
+    color: var(--text-color-dark);
+    font-weight: bold;
+    padding: 5px 0;
+    position: relative;
+}
+
+.service-nav-links ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-blue);
+    transition: width 0.3s ease;
+}
+
+.service-nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+.service-contact-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-logo-firma-gob {
+    height: 45px; /* Ajusta el tamaño */
+}
+
+.service-contact-button {
+    background-color: var(--primary-blue);
+    color: var(--text-color-light);
+    padding: 8px 15px;
+}
+
+.service-contact-button:hover {
+    background-color: var(--button-hover-blue);
+}
+
+.service-hero {
+    background: linear-gradient(to right, #004d80, #007bff); /* Degradado del hero */
+    padding: 80px 30px;
+    color: var(--text-color-light);
+    position: relative;
+    overflow: hidden;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Centrar para la imagen */
+    background-image: url('https://via.placeholder.com/800x400?text=Servicio+Header+Background'); /* Imagen de fondo del hero */
+    background-size: cover;
+    background-position: center;
+}
+
+.service-hero-content {
+    z-index: 2; /* Asegurar que el texto esté encima de la imagen de fondo */
+}
+
+.service-hero-content p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.service-hero-content p:first-child {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* -------------------- Main Content -------------------- */
+.service-main-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.service-title-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    position: relative;
+}
+
+.service-back-button {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    padding: 8px 15px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.service-back-button:hover {
+    background-color: var(--primary-blue);
+    color: var(--text-color-light);
+}
+
+.service-back-button i {
+    margin-right: 8px;
+}
+
+.service-title-section h2 {
+    font-size: 2.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--text-color-dark);
+}
+
+.service-subtitle {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.service-info-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.service-text-card {
+    flex: 2; /* Ocupa más espacio */
+    min-width: 300px;
+    max-width: 600px;
+    background-color: var(--light-gray-bg);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05); /* Sombra interna */
+}
+
+.service-benefits-card,
+.service-diagram-card {
+    flex: 1; /* Ocupan espacio similar */
+    min-width: 280px;
+    max-width: 350px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    border: 1px solid var(--card-border-light);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.card-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--primary-blue);
+}
+
+.service-benefits-card .benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.service-benefits-card .benefit-item i {
+    color: var(--green-accent);
+    font-size: 1.2em;
+    margin-top: 4px;
+}
+
+.service-benefits-card .benefit-item p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.service-diagram-card .diagram-description {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.service-diagram-card .diagram-placeholder {
+    width: 100%;
+    background-color: var(--light-gray-bg);
+    border-radius: 5px;
+    min-height: 80px; /* Placeholder para el gráfico */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Para contener la imagen */
+}
+
+.service-diagram-card .diagram-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.service-request-button {
+    background-color: var(--primary-blue);
+    color: var(--text-color-light);
+    padding: 12px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.service-request-button:hover {
+    background-color: var(--button-hover-blue);
+}
+
+/* -------------------- Other Services Section -------------------- */
+.other-services-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-top: 40px;
+    text-align: center;
+}
+
+.other-services-section .section-title {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    color: var(--primary-blue);
+}
+
+.other-services-section .section-title i {
+    margin-right: 10px;
+}
+
+.other-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.service-preview-card {
+    border: 1px solid var(--card-border-light);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    background-color: var(--light-gray-bg);
+    text-align: left; /* Contenido alineado a la izquierda */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinear contenido a la izquierda */
+}
+
+.service-preview-card .preview-logo {
+    height: 50px;
+    margin-bottom: 15px;
+    align-self: center; /* Centrar el logo dentro de la tarjeta */
+}
+
+.service-preview-card .preview-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.service-preview-card .preview-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Para que la descripción ocupe el espacio disponible */
+}
+
+.service-preview-card .preview-button {
+    background-color: var(--primary-blue);
+    color: var(--text-color-light);
+    padding: 10px 20px;
+    font-weight: bold;
+    align-self: center; /* Centrar el botón */
+    width: 80%; /* Ancho fijo para el botón */
+}
+
+.service-preview-card .preview-button:hover {
+    background-color: var(--button-hover-blue);
+}
+
+.view-all-services-link {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* -------------------- Flechas de Scroll y Decorativos -------------------- */
+.scroll-up-fixed, .scroll-down-fixed {
+    position: fixed;
+    background-color: var(--primary-blue);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-up-fixed:hover, .scroll-down-fixed:hover {
+    background-color: var(--button-hover-blue);
+}
+
+.scroll-up-fixed {
+    bottom: 30px;
+    right: 30px;
+    display: none; /* Oculto por defecto, JS lo muestra */
+}
+
+.scroll-down-fixed {
+    bottom: 90px; /* Posicionado encima de la flecha de subir */
+    right: 30px;
+}
+
+/* Decorativos (círculo y cuadrado azul) */
+.decorative-blue-circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 123, 255, 0.1); /* Azul semi-transparente */
+    border-radius: 50%;
+    top: 100px; /* Ajusta posición */
+    left: -50px;
+    z-index: 0;
+}
+
+.decorative-blue-square {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 123, 255, 0.08); /* Azul semi-transparente */
+    transform: rotate(45deg);
+    bottom: 50px;
+    right: -70px;
+    z-index: 0;
+}
+
+
+/* -------------------- Footer (Reusado) -------------------- */
+.main-footer {
+    font-family: Arial, sans-serif;
+    background-color: var(--dark-blue-header); /* Usa el mismo azul oscuro del header */
+    color: var(--text-color-light);
+    padding-top: 20px;
+    position: relative;
+}
+
+.footer-content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin-bottom: 30px;
+}
+
+.footer-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 200px;
+}
+
+.footer-firma-gob-logo {
+    height: 80px; /* Ajusta el tamaño */
+    margin-bottom: 20px;
+}
+
+.footer-bottom-logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-ogtic-logo,
+.footer-gob-innovacion-logo {
+    height: 35px; /* Ajusta el tamaño */
+}
+
+.footer-links h4,
+.footer-contact h4,
+.footer-visit h4 {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: var(--text-color-light);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    font-size: 0.95em;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    opacity: 1;
+    color: var(--link-hover-color);
+}
+
+.footer-contact p,
+.footer-visit p {
+    font-size: 0.95em;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+.footer-bottom-bar {
+    background-color: var(--light-gray-bg);
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #e0e0e0;
+}
+
+.certifications-logos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.cert-logo {
+    height: 40px;
+}
+
+.other-logos {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.seal-logo {
+    height: 50px;
+}
+
+.copyright-bar {
+    background-color: white;
+    color: var(--text-color-dark);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.85em;
+    border-top: 1px solid #e0e0e0;
+}
+
+.copyright-bar p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.ogtic-small-logo {
+    height: 18px;
+    margin-left: 5px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-media span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.social-media a {
+    color: var(--text-color-dark);
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--primary-blue);
+}
+
+/* -------------------- Media Queries (Responsividad) -------------------- */
+@media (max-width: 992px) {
+    .service-main-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .service-nav-links ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .service-contact-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .service-info-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-text-card,
+    .service-benefits-card,
+    .service-diagram-card {
+        max-width: 90%;
+        width: 100%;
+    }
+    .service-back-button {
+        position: static;
+        margin-bottom: 20px;
+    }
+    .footer-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-section {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 25px;
+    }
+    .footer-logos {
+        align-items: center;
+    }
+    .footer-bottom-bar {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .copyright-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .service-hero {
+        padding: 50px 20px;
+        min-height: 200px;
+    }
+    .service-title-section h2 {
+        font-size: 2em;
+    }
+    .service-request-button {
+        width: 100%;
+    }
+    .other-services-grid {
+        grid-template-columns: 1fr;
+    }
+    .decorative-blue-circle, .decorative-blue-square {
+        display: none; /* Ocultar elementos decorativos en pantallas muy pequeñas */
+    }
+    .scroll-up-fixed, .scroll-down-fixed {
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+    .scroll-down-fixed {
+        bottom: 75px;
+    }
+}

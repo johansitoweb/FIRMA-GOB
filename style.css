@@ -1,0 +1,984 @@
+/* Variables de color (opcional, pero buena práctica) */
+:root {
+    --primary-blue: #007bff; /* Un ejemplo de azul */
+    --dark-blue: #003366; /* Un azul más oscuro para el fondo */
+    --text-color: #333;
+    --light-gray: #f2f2f2;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: white; /* O un ligero degradado si es el caso */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.top-bar {
+    background-color: var(--dark-blue);
+    color: white;
+    font-size: 0.8em;
+    padding: 5px 20px;
+    text-align: right;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.main-nav .logo img {
+    height: 40px; /* Ajusta según el tamaño real de tus logos */
+    margin-right: 10px;
+}
+
+.search-contact input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-contact button {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.sub-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding: 5px 20px;
+    border-top: 1px solid #eee;
+}
+
+.sub-nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 15px;
+    display: block;
+}
+
+.hero-section {
+    background: linear-gradient(to right, var(--dark-blue) 0%, var(--dark-blue) 50%, #f0f8ff 50%, #f0f8ff 100%); /* Ejemplo de degradado */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    color: white; /* Para el texto del lado azul */
+    position: relative; /* Para posicionar las imágenes si son de fondo */
+    min-height: 400px; /* Ajusta la altura según necesites */
+    overflow: hidden; /* Para las imágenes que se "salen" */
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+    z-index: 1; /* Para que el texto esté por encima de las imágenes de fondo */
+}
+
+.hero-content .highlight {
+    color: yellow; /* O el color exacto que aparece en la imagen */
+    font-weight: bold;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
+
+.hero-images {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%; /* Ajusta el ancho que ocupan las imágenes */
+    height: 100%;
+    background-image: url('celular.png'), url('chica.png'); /* Usa las rutas correctas a tus imágenes */
+    background-repeat: no-repeat;
+    background-size: contain, cover; /* Ajusta según cómo quieras que se muestren */
+    background-position: left center, right center; /* Posiciona las imágenes */
+    z-index: 0;
+}
+
+/* Otros estilos para botones de información, etc. */
+.info-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacio entre botones */
+    padding: 30px 20px;
+    background-color: var(--light-gray);
+    flex-wrap: wrap; /* Para que los botones se envuelvan en pantallas pequeñas */
+}
+
+.info-buttons button {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-buttons button:hover {
+    background-color: #eee;
+}
+
+.digital-transformation {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.digital-transformation h2 {
+    color: var(--text-color);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.digital-transformation h3 {
+    color: var(--primary-blue);
+    font-size: 1.2em;
+    margin-top: 0;
+    cursor: pointer; /* Indicar que es interactivo */
+}
+
+/* Media Queries para Responsividad (ejemplo básico) */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search-contact {
+        margin-top: 10px;
+    }
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .hero-images {
+        position: static; /* O ajusta el posicionamiento para móvil */
+        width: 100%;
+        height: 200px; /* Ajusta según necesites */
+    }
+    .info-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ... (Mantén todo el CSS anterior) ... */
+
+/* Estilos para la sección de detalles (¿QUÉ ES? y OBJETIVOS) */
+.details-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espacio entre las tarjetas y la ilustración */
+    padding: 80px 20px;
+    background-color: white; /* Asegúrate de que el fondo sea blanco */
+    position: relative; /* Para posicionar elementos decorativos */
+    overflow: hidden; /* Para las esquinas amarillas y verdes */
+}
+
+.detail-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Para que esté por encima de elementos de fondo */
+    transition: transform 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
+}
+
+.detail-card .icon-container {
+    background-color: #e0f2f7; /* Un azul muy claro */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.detail-card .card-icon {
+    width: 50px; /* Ajusta el tamaño de tus iconos */
+    height: 50px;
+}
+
+.detail-card h4 {
+    color: var(--primary-blue); /* Ajusta a tu azul principal */
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.detail-card p {
+    color: var(--text-color);
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.line-illustration {
+    position: relative;
+    height: 250px; /* Ajusta la altura de la línea punteada */
+    display: flex;
+    align-items: center;
+}
+
+.line-illustration .dotted-line {
+    width: 100px; /* Ancho de la imagen de la línea punteada */
+    height: auto;
+}
+
+/* Estilos para la sección "¿Por qué Firma GOB?" */
+.why-firmagob-section {
+    background-color: var(--dark-blue); /* El azul oscuro del fondo */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-firmagob-section .subtitle {
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.why-firmagob-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+}
+
+.feature-card {
+    background-color: #004d80; /* Un azul ligeramente más claro que el fondo */
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px; /* Para asegurar que todas las tarjetas tengan una altura similar */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background-color: #005a99; /* Un poco más oscuro al hover */
+}
+
+.feature-card i {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #ffd700; /* Color amarillo para los iconos, ajusta según la imagen */
+}
+
+.feature-card h5 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.empty-card {
+    /* Si el octavo cuadro está vacío o es un espacio de diseño */
+    background-color: transparent; /* O el color de fondo para que se mezcle */
+    box-shadow: none;
+    border: none;
+}
+
+
+.bottom-illustration {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Para que la base del hombre esté en la parte inferior */
+    margin-top: 50px;
+    min-height: 250px; /* Altura mínima para contener la ilustración */
+}
+
+.man-phone-img {
+    position: absolute;
+    bottom: 0;
+    right: 5%; /* Ajusta la posición del hombre */
+    height: 300px; /* Ajusta el tamaño del hombre */
+    z-index: 2; /* Para que esté por encima de otros elementos */
+}
+
+.bottom-logo-firma-gob {
+    position: absolute;
+    bottom: 20px; /* Ajusta la posición del logo */
+    left: 10%; /* Ajusta la posición del logo */
+    height: 80px; /* Ajusta el tamaño del logo */
+    opacity: 0.7; /* Para que sea más sutil */
+    z-index: 1;
+}
+
+/* Elementos decorativos (estrellas, cuadrados, flecha) */
+.decorative-stars {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 0;
+}
+
+.decorative-stars i {
+    color: #ffffff; /* Color de las estrellas */
+    font-size: 1.5em;
+    opacity: 0.3;
+}
+
+.decorative-square {
+    position: absolute;
+    width: 150px; /* Tamaño del cuadrado */
+    height: 150px;
+    z-index: 0;
+    transform: rotate(45deg); /* Para que parezca un diamante */
+    border-radius: 10px; /* Ligeramente redondeado */
+}
+
+.yellow-square {
+    background-color: #ffd700; /* Amarillo */
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%) rotate(45deg); /* Fuera de la vista, solo una esquina */
+    opacity: 0.8;
+}
+
+.green-square {
+    background-color: #8bc34a; /* Verde */
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%) rotate(45deg); /* Fuera de la vista, solo una esquina */
+    opacity: 0.8;
+}
+
+.scroll-up-arrow {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-blue);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+/* Media Queries para responsividad (ajusta según necesites) */
+@media (max-width: 1024px) {
+    .details-section {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .line-illustration {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .line-illustration .dotted-line {
+        height: 50px;
+        width: auto;
+    }
+    .man-phone-img {
+        right: 0;
+        height: 250px;
+    }
+    .bottom-logo-firma-gob {
+        left: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes existentes de la primera imagen */
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .hero-images {
+        position: relative; /* O ajusta el posicionamiento para móvil */
+        width: 100%;
+        height: 200px;
+        background-size: contain;
+        background-position: center;
+    }
+    .info-buttons-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Nuevos ajustes para la segunda imagen */
+    .details-section {
+        padding: 50px 15px;
+    }
+    .detail-card {
+        padding: 20px;
+    }
+    .why-firmagob-section h2 {
+        font-size: 1.8em;
+    }
+    .feature-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        max-width: 300px; /* Limita el ancho de las tarjetas */
+    }
+    .man-phone-img {
+        height: 200px;
+        right: 2%;
+    }
+    .bottom-logo-firma-gob {
+        left: 2%;
+        height: 60px;
+    }
+    .decorative-stars, .decorative-square {
+        display: none; /* Ocultar elementos decorativos en móviles para simplificar */
+    }
+}
+
+/* Añadí esto para algunos íconos que no son Font Awesome pero se ven en las imágenes */
+.logo-group .logo-firma-gob { height: 30px; }
+.logo-group .logo-ogtic { height: 35px; }
+
+.search-contact button i { margin-right: 5px; }
+.contact-button { background-color: #007bff; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; margin-left: 5px; }
+.sub-nav ul li a i { margin-left: 5px; }
+
+.hero-firma-logo {
+    height: 60px; /* Ajusta el tamaño de este logo en el hero */
+    margin-top: 20px;
+}
+
+/* Variables de color para consistencia */
+:root {
+    --footer-bg-dark: #002c6b; /* Azul oscuro del footer principal */
+    --footer-bg-light: #f8f8f8; /* Blanco/gris claro de la barra de certificaciones */
+    --footer-text-light: #ffffff;
+    --footer-text-dark: #333333;
+    --link-hover-color: #f0f0f0;
+    --primary-blue: #007bff; /* Color para la flecha de subir y el logo pequeño de OGTIC */
+}
+
+/* Estilos generales del footer */
+.main-footer {
+    font-family: Arial, sans-serif;
+    background-color: var(--footer-bg-dark);
+    color: var(--footer-text-light);
+    padding-top: 20px;
+    position: relative; /* Para la flecha de scroll-up si está dentro del footer */
+}
+
+/* Contenido principal del footer (logos, enlaces, contacto) */
+.footer-content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin-bottom: 30px;
+}
+
+.footer-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 200px;
+}
+
+.footer-firma-gob-logo {
+    height: 80px; /* Ajusta el tamaño */
+    margin-bottom: 20px;
+}
+
+.footer-bottom-logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-ogtic-logo,
+.footer-gob-innovacion-logo {
+    height: 35px; /* Ajusta el tamaño */
+}
+
+.footer-links h4,
+.footer-contact h4,
+.footer-visit h4 {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: var(--footer-text-light); /* Asegura que el título sea blanco */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: var(--footer-text-light);
+    text-decoration: none;
+    font-size: 0.95em;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    opacity: 1;
+    color: var(--link-hover-color);
+}
+
+.footer-contact p,
+.footer-visit p {
+    font-size: 0.95em;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+/* Barra inferior de certificaciones y sellos */
+.footer-bottom-bar {
+    background-color: var(--footer-bg-light);
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #e0e0e0;
+}
+
+.certifications-logos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar en móviles */
+    margin-bottom: 10px; /* Espacio para móviles */
+}
+
+.cert-logo {
+    height: 40px; /* Tamaño de los logos de certificación */
+}
+
+.other-logos {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center; /* Centrar en móviles */
+    margin-bottom: 10px; /* Espacio para móviles */
+}
+
+.seal-logo {
+    height: 50px; /* Tamaño de los sellos */
+}
+
+/* Barra de Copyright y Redes Sociales */
+.copyright-bar {
+    background-color: white; /* Asumo que es blanco como en la imagen */
+    color: var(--footer-text-dark);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.85em;
+    border-top: 1px solid #e0e0e0;
+}
+
+.copyright-bar p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.ogtic-small-logo {
+    height: 18px; /* Tamaño del logo pequeño de OGTIC */
+    margin-left: 5px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-media span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.social-media a {
+    color: var(--footer-text-dark); /* Color de los iconos de redes sociales */
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--primary-blue); /* Color al pasar el ratón */
+}
+
+/* Flecha de scroll-up */
+.scroll-up-arrow {
+    position: absolute; /* O 'fixed' si quieres que siempre esté visible en la ventana */
+    top: -25px; /* Posicionamiento para que esté ligeramente fuera del footer */
+    right: 50px;
+    background-color: var(--primary-blue);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-up-arrow:hover {
+    background-color: #0056b3; /* Un azul más oscuro al pasar el ratón */
+}
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .footer-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        max-width: 300px; /* Limitar ancho en móvil */
+        margin-bottom: 25px;
+    }
+
+    .footer-logos {
+        align-items: center; /* Centrar logos en móvil */
+    }
+
+    .footer-bottom-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .certifications-logos,
+    .other-logos {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .copyright-bar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .social-media {
+        margin-top: 10px;
+    }
+
+    .scroll-up-arrow {
+        right: 20px; /* Ajusta posición en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-firma-gob-logo {
+        height: 60px;
+    }
+    .footer-ogtic-logo,
+    .footer-gob-innovacion-logo {
+        height: 30px;
+    }
+    .cert-logo {
+        height: 35px;
+    }
+    .seal-logo {
+        height: 40px;
+    }
+}
+
+/* ... (Mantén todo el CSS anterior de style.css) ... */
+
+.hero-images {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%; /* Ajusta el ancho que ocupan las imágenes */
+    height: 100%;
+    /* Ahora usando imágenes de placeholder para el fondo.
+       Ajusta los URLs y las posiciones según las imágenes reales que uses. */
+    background-image: url('https://via.placeholder.com/400x500?text=Celular'), url('https://via.placeholder.com/600x400?text=Mujer');
+    background-repeat: no-repeat;
+    background-size: contain, cover; /* Ajusta según cómo quieras que se muestren */
+    background-position: left center, right center; /* Posiciona las imágenes */
+    z-index: 0;
+}
+
+/* ... (El resto de tu CSS en style.css) ... */
+
+/* Variables de color para consistencia */
+:root {
+    --bg-light-blue: #e0f2f7; /* Un azul muy claro para el fondo */
+    --bubble-bg-light: #f0f8ff; /* Fondo claro de las burbujas */
+    --bubble-bg-dark: #e0f0f7; /* Fondo ligeramente más oscuro de la burbuja derecha */
+    --text-color-dark: #333;
+    --text-color-blue: #007bff; /* Azul para el título de la burbuja derecha */
+    --star-color: #ffd700; /* Color amarillo para las estrellas */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-light-blue); /* Fondo de la sección */
+    overflow-x: hidden; /* Evitar scroll horizontal por elementos fuera de pantalla */
+}
+
+.integration-section {
+    position: relative;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px; /* Altura mínima para la sección */
+    overflow: hidden; /* Para las estrellas que pueden estar fuera */
+}
+
+.integration-dialogue {
+    display: flex;
+    flex-direction: column; /* Apilar en móviles */
+    gap: 60px; /* Espacio entre los dos diálogos */
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.person-left,
+.person-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px; /* Limitar el ancho de cada "diálogo" */
+}
+
+.person-left {
+    justify-content: flex-start;
+}
+
+.person-right {
+    justify-content: flex-end;
+}
+
+.person-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white; /* Borde blanco alrededor de la imagen */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.speech-bubble {
+    background-color: var(--bubble-bg-light);
+    border-radius: 20px;
+    padding: 20px 25px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 400px;
+    text-align: left;
+}
+
+/* Flecha de la burbuja izquierda */
+.left-bubble::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px; /* Ajusta para que la punta toque la imagen */
+    transform: translateY(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    background-color: var(--bubble-bg-light);
+    border-radius: 0 0 0 5px; /* Para una punta más suave */
+    box-shadow: -2px 2px 5px rgba(0,0,0,0.1);
+    z-index: -1;
+}
+
+/* Flecha de la burbuja derecha */
+.right-bubble {
+    background-color: var(--bubble-bg-dark); /* Color ligeramente diferente */
+}
+
+.right-bubble::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -20px; /* Ajusta para que la punta toque la imagen */
+    transform: translateY(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    background-color: var(--bubble-bg-dark);
+    border-radius: 0 5px 0 0; /* Para una punta más suave */
+    box-shadow: 2px -2px 5px rgba(0,0,0,0.1);
+    z-index: -1;
+}
+
+.speech-bubble p {
+    margin: 0;
+    color: var(--text-color-dark);
+    line-height: 1.5;
+}
+
+.speech-bubble h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--text-color-blue);
+    font-size: 1.2em;
+    line-height: 1.3;
+}
+
+/* Estrellas decorativas */
+.decorative-stars-integration {
+    position: absolute;
+    color: var(--star-color);
+    font-size: 1.5em; /* Tamaño de las estrellas */
+    opacity: 0.6;
+    display: flex;
+    gap: 10px;
+}
+
+.decorative-stars-integration.top-left {
+    top: 10%;
+    left: 10%;
+    transform: rotate(20deg);
+}
+
+.decorative-stars-integration.bottom-right {
+    bottom: 10%;
+    right: 10%;
+    transform: rotate(-30deg);
+}
+
+
+/* Media Queries para Responsividad */
+@media (min-width: 768px) {
+    .integration-dialogue {
+        flex-direction: row; /* En línea en pantallas más grandes */
+        justify-content: space-between;
+    }
+    .person-left {
+        margin-right: auto; /* Empuja a la izquierda */
+    }
+    .person-right {
+        margin-left: auto; /* Empuja a la derecha */
+    }
+}
+
+@media (max-width: 767px) {
+    .integration-dialogue {
+        gap: 40px;
+    }
+    .person-left,
+    .person-right {
+        flex-direction: column; /* Apilar imagen y burbuja en móviles */
+        text-align: center;
+    }
+    .person-left .speech-bubble {
+        order: 1; /* Pone la burbuja primero */
+    }
+    .person-left .person-image {
+        order: 2; /* Pone la imagen después */
+    }
+    .person-right .speech-bubble {
+        order: 2; /* Pone la burbuja después */
+    }
+    .person-right .person-image {
+        order: 1; /* Pone la imagen primero */
+    }
+
+    /* Ajustar las flechas de las burbujas en móvil */
+    .left-bubble::before {
+        top: auto;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+    .right-bubble::before {
+        top: auto;
+        bottom: -20px;
+        right: 50%;
+        transform: translateX(50%) rotate(90deg);
+        box-shadow: -2px 2px 5px rgba(0,0,0,0.1);
+    }
+    .decorative-stars-integration {
+        font-size: 1em; /* Estrellas más pequeñas en móvil */
+    }
+}
