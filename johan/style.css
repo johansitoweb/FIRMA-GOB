@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color:grey; /* Dark blue background for the entire page */
+    color: #333;
+    display: flex; /* Use flexbox to center the card */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure it takes full viewport height */
+    padding: 20px; /* Add some padding around the card for smaller screens */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Main Form Container - now the white card */
+.form-container {
+    width: 100%; /* Take full width of its container (body) */
+    max-width: 1000px; /* Max width for the whole card */
+    padding: 0; /* Remove initial padding, as we'll style inner sections */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Slightly stronger shadow for the card */
+    display: flex;
+    flex-direction: column; /* Stack header and form vertically */
+}
+
+/* Header Content inside the Card */
+.header-content-in-card {
+    background-color: #002266; /* A very light grey for the header section within the card */
+    color: #333; /* Text color for content within this section */
+    padding: 20px 40px; /* Padding for the header content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 8px; /* Match card border radius */
+    border-top-right-radius: 8px; /* Match card border radius */
+    border-bottom: 1px solid #eee; /* Separator line */
+    margin-bottom: 25px; /* Space between header and form fields */
+}
+
+.breadcrumbs-in-card h1 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 500;
+    display: inline;
+    color: #f5f0f0; /* Darker text for the main title */
+}
+
+.breadcrumbs-in-card span {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #fffbfb; /* Greyer for the breadcrumb part */
+    margin-left: 10px;
+}
+
+.regresar-button {
+    background-color: #337ab7; /* A shade of blue for the button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    transition: background-color 0.3s ease;
+}
+
+.regresar-button:hover {
+    background-color: #286090;
+}
+
+/* Form Styling - now apply padding to the form itself or a wrapper inside the card */
+.service-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px 30px 40px; /* Padding for the form section */
+}
+
+.required-fields-note {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 25px;
+    padding: 0 40px; /* Align with form padding */
+}
+
+.form-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.required-star {
+    color: #e74c3c;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+    background-color: #fdfdfd;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #a7d9ff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(100, 180, 255, 0.2);
+}
+
+.message-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Privacy Text */
+.privacy-text {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 30px;
+    line-height: 1.5;
+}
+
+.privacy-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.privacy-link:hover {
+    text-decoration: underline;
+}
+
+/* Marketing Opt-in */
+.marketing-opt-in {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+}
+
+.marketing-opt-in p {
+    font-size: 0.95em;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 0.9em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #666;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ddd;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Submit Button */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.submit-button {
+    background-color: #002266;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #001a4d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    .form-container {
+        border-radius: 0; /* Remove border-radius on very small screens to go full width */
+        box-shadow: none; /* Remove shadow on very small screens */
+    }
+
+    .header-content-in-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 15px 20px; /* Smaller padding */
+        border-top-left-radius: 0; /* Remove radius for full width */
+        border-top-right-radius: 0; /* Remove radius for full width */
+    }
+
+    .breadcrumbs-in-card {
+        text-align: left;
+    }
+
+    .regresar-button {
+        width: auto;
+        align-self: flex-end;
+    }
+
+    .service-form,
+    .required-fields-note,
+    .marketing-opt-in,
+    .privacy-text {
+        padding: 0 20px 20px 20px; /* Adjust padding for inner sections */
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .marketing-opt-in {
+        padding-top: 20px;
+    }
+
+    .marketing-opt-in p {
+        font-size: 0.9em;
+    }
+
+    .checkbox-container {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumbs-in-card h1 {
+        font-size: 1.3em;
+    }
+    .breadcrumbs-in-card span {
+        font-size: 1em;
+        display: block;
+        margin-left: 0;
+    }
+    .regresar-button {
+        padding: 8px 15px;
+        font-size: 0.85em;
+    }
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    .submit-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+.color-r {
+    color: #2805f3; 
+}
+
+label{
+    color: #2805f3; /* Dark blue color for labels */
+}

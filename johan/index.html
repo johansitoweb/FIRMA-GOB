@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Servicio - Ambiente de prueba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <main class="form-container">
+        <div class="header-content-in-card">
+            <div class="breadcrumbs-in-card">
+                <h1>Solicitud de servicio</h1><br>
+                <span>&gt; Ambiente de prueba</span>
+            </div>
+            <button class="regresar-button">
+                <i class="fas fa-arrow-left"></i> REGRESAR
+            </button>
+        </div>
+
+        <p class="required-fields-note">* Todos los campos marcados son obligatorios</p>
+
+        <form class="service-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre"  class="color-r">Nombre: <span class="required-star">*</span></label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo">
+                </div>
+                <div class="form-group">
+                    <label for="email"  class="color-r">Dirección de correo electrónico: <span class="required-star">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Correo Electrónico">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="institucion" class="color-r">Institución:</label>
+                    <input type="text" id="institucion" name="institucion" placeholder="Institución">
+                </div>
+                <div class="form-group">
+                    <label for="telefono"  class="color-r">Número de teléfono: <span class="required-star">*</span></label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono">
+                </div>
+            </div>
+
+            <div class="form-group message-group">
+                <label for="mensaje"  class="color-r">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Asunto"></textarea>
+            </div>
+
+            <p class="privacy-text">
+                Tus datos personales se utilizarán para procesar la solicitud y apoyar tu experiencia en este sitio web como indica nuestra <a href="#" class="privacy-link">Política de Privacidad</a>
+            </p>
+
+            <div class="marketing-opt-in">
+                <p>¿Deseas recibir información sobre las promociones de Firma GOB?</p>
+                <label class="checkbox-container">
+                    <input type="checkbox" name="marketing_opt_in">
+                    <span class="checkmark"></span>
+                    Marca esta casilla para dar tu consentimiento al tratamiento de datos personales con fines de marketing/ventas directas como indica nuestra <a href="#" class="privacy-link">Política de Privacidad</a>
+                </label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-button">Enviar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

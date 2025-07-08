@@ -1118,7 +1118,7 @@ body {
 }
 
 .contact-button {
-    background-color: var(--primary-blue);
+    
     color: var(--text-color-light);
     padding: 8px 15px;
 }

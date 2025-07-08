@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="vista6.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+     <header class="main-navbar">
+        <div class="navbar-left">
+            <span class="logo-firma">Firma GOB</span>
+            <span class="logo-ogtic">ogtic</span>
+            <span class="disclaimer">Este es una web oficial del Gobierno de la República Dominicana. <a href="#">Ver más detalles</a></span>
+        </div>
+        <div class="navbar-right">
+            <div class="search-box">
+                <input type="text" placeholder="¿Qué quieres buscar?">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <button class="contact-icon-button">
+                <i class="fas fa-comment"></i>
+            </button>
+            <button class="contact-button">
+                <i class="fas fa-user-circle"></i> CONTACTO
+            </button>
+        </div>
+    </header>
+
+    <nav class="sub-navbar">
+        <div class="sub-navbar-links-wrapper"> <a href="#" class="nav-item">Nosotros <i class="fas fa-chevron-down"></i></a>
+            <a href="#" class="nav-item">Soporte</a>
+        </div>
+        <div class="sub-navbar-buttons-wrapper">
+             <button class="nav-button">MENSAJE</button>
+            <button class="nav-button">CONTACTO</button>
+            <button class="nav-button">REDES SOCIALES</button>
+            <button class="nav-button">UBICACIÓN</button>
+            <button class="nav-button">AMBIENTE PRUEBA</button>
+        </div>
+    </nav>
+
+    <div class="diagonal-bg"></div>
+
+    <div class="main-content-wrapper">
+        <section class="help-section">
+            <p class="help-question">¿PODEMOS HACER ALGO POR TI?</p>
+            <h2 class="help-title">¿Estás inspirado? ¡Ponte en contacto con nosotros!</h2>
+            <div class="message-info">
+                <i class="fas fa-check-circle green-check"></i>
+                <p>Envíamos un mensaje: Completa el siguiente formulario y te respoderemos dentro de las 24 horas luego de emitido el formulario</p>
+            </div>
+        </section>
+
+        <main class="form-container">
+            <p class="required-fields-note">* Todos los campos marcados son obligatorios</p>
+
+            <form class="service-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo: <span class="required-star">*</span></label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Dirección de correo electrónico: <span class="required-star">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="Correo Electrónico">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="institucion">Institución:</label>
+                        <input type="text" id="institucion" name="institucion" placeholder="Institución">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Número de teléfono: <span class="required-star">*</span></label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono">
+                    </div>
+                </div>
+
+                <div class="form-group message-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Asunto"></textarea>
+                </div>
+
+                <p class="privacy-text">
+                    Tus datos personales se utilizarán para procesar la solicitud y apoyar tu experiencia en este sitio web como indica nuestra <a href="#" class="privacy-link">Política de Privacidad</a>
+                </p>
+
+                <div class="marketing-opt-in">
+                    <p>¿Deseas recibir información sobre las promociones de Firma GOB?</p>
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="marketing_opt_in">
+                        <span class="checkmark"></span>
+                        Marca esta casilla para dar tu consentimiento al tratamiento de datos personales con fines de marketing/ventas directas como indica nuestra <a href="#" class="privacy-link">Política de Privacidad</a>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-button">Enviar</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <button class="scroll-to-top" title="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <!--Este es el footer-->
+     <footer class="main-footer">
+        <div class="footer-content-wrapper">
+            <div class="footer-section footer-logos">
+                <img src="firma-gob-white-logo.png" alt="Firma GOB" class="footer-firma-gob-logo">
+                <div class="footer-bottom-logos">
+                    <img src="ogtic-white-logo.png" alt="OGTIC" class="footer-ogtic-logo">
+                    <img src="gob-innovacion-logo.png" alt="Gobierno de Innovación" class="footer-gob-innovacion-logo">
+                </div>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>AYUDA</h4>
+                <ul>
+                    <li><a href="#">Términos de Uso</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>INFORMACIÓN</h4>
+                <ul>
+                    <li><a href="#">Firma GOB</a></li>
+                    <li><a href="#">Portal Informativo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-contact">
+                <h4>CONTÁCTANOS</h4>
+                <p>(809) 286-1009</p>
+            </div>
+
+            <div class="footer-section footer-visit">
+                <h4>VISÍTANOS</h4>
+                <p>Edificio Vista, Av. Rómulo Betancourt 311, Santo Domingo</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <div class="certifications-logos">
+                <img src="https://via.placeholder.com/40x40?text=A1" alt="Certificación A1" class="cert-logo">
+                <img src="https://via.placeholder.com/40x40?text=A2" alt="Certificación A2" class="cert-logo">
+                <img src="https://via.placeholder.com/40x40?text=A3" alt="Certificación A3" class="cert-logo">
+                <img src="https://via.placeholder.com/40x40?text=A4" alt="Certificación A4" class="cert-logo">
+                <img src="https://via.placeholder.com/40x40?text=A5" alt="Certificación A5" class="cert-logo">
+                <img src="https://via.placeholder.com/40x40?text=A6" alt="Certificación A6" class="cert-logo">
+                <img src="https://via.placeholder.com/40x40?text=A7" alt="Certificación A7" class="cert-logo">
+                <img src="https://via.placeholder.com/40x40?text=B1" alt="Certificación B1" class="cert-logo">
+                <img src="https://via.placeholder.com/40x40?text=E1" alt="Certificación E1" class="cert-logo">
+            </div>
+            <div class="other-logos">
+                <img src="ogtic.png" alt="Sello OGTIC" class="seal-logo">
+                <img src="https://via.placeholder.com/50x50?text=ISO" alt="Certificación ISO" class="seal-logo">
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            <p>© 2023 Todos los Derechos Reservados. Desarrollado por <img src="ogtic-small-blue.png" alt="OGTIC" class="ogtic-small-logo"></p>
+            <div class="social-media">
+                <span>SÍGUENOS</span>
+                <a href="https://www.facebook.com/firmagobrd" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/firmagobrd" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/firma.gob" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
