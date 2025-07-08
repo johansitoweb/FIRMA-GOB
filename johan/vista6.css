@@ -793,3 +793,273 @@ body {
 .social-media a:hover {
     color: var(--primary-blue);
 }
+
+
+/* 9. Ubicación Section (Map) */
+.location-section {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: var(--bg-light);
+    padding-bottom: 100px;
+}
+
+.location-subtitle {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.location-title {
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: var(--firma-blue);
+}
+
+.map-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.map-container iframe {
+    display: block;
+}
+
+.map-address-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.map-address-overlay p {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+
+.contact-social-section {
+    width: 100%;
+    max-width: 900px; /* Max width for the whole section */
+    padding: 20px; /* Padding inside the section if it's part of a larger layout */
+    box-sizing: border-box;
+}
+
+.card-container {
+    display: flex;
+    gap: 30px; /* Space between the two cards */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.info-card {
+    background-color: var(--bg-white);
+    border-radius: var(--card-border-radius); /* Applied new variable for smoother corners */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* More pronounced shadow */
+    flex: 1; /* Allows cards to grow and shrink */
+    min-width: 300px; /* Minimum width for cards before wrapping */
+    max-width: 450px; /* Max width for individual card */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Ensures content respects border-radius */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.info-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+}
+
+.card-header {
+    background-color: var(--firma-blue-light); /* Blue tab header */
+    color: var(--bg-white);
+    padding: 12px 25px; /* Increased padding */
+    /* border-top-left-radius: var(--card-border-radius); */ /* Removed as overflow hidden handles it */
+    /* border-top-right-radius: var(--card-border-radius); */ /* Removed as overflow hidden handles it */
+    position: relative;
+    text-align: center;
+    font-size: 1.15em; /* Slightly larger text */
+    font-weight: 700; /* Bolder header text */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-header h3 {
+    margin: 0;
+}
+
+.card-content {
+    padding: 25px 25px; /* Consistent padding */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    gap: 18px; /* Slightly increased space between paragraphs/elements */
+    flex-grow: 1; /* Allows content to take available space */
+}
+
+.contact-card .card-content p {
+    margin: 0;
+    font-size: 0.98em; /* Slightly larger font */
+    color: var(--text-dark);
+    line-height: 1.5;
+    display: flex; /* For icon alignment */
+    align-items: flex-start;
+    gap: 12px; /* Slightly more space for icons */
+}
+
+.contact-card .card-content p i {
+    color: var(--firma-blue-light); /* Icon color */
+    font-size: 1.2em; /* Slightly larger icons */
+    padding-top: 3px; /* Adjust icon vertical alignment */
+}
+
+.contact-card .card-content a {
+    color: var(--firma-blue-light);
+    text-decoration: none;
+    font-weight: 500; /* Make links slightly bolder */
+}
+
+.contact-card .card-content a:hover {
+    text-decoration: underline;
+    color: #2a5a8a; /* Darker blue on hover */
+}
+
+.social-prompt {
+    font-size: 1em; /* Slightly larger font */
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 20px; /* Space below prompt */
+    text-align: center;
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the social icons */
+    gap: 20px; /* Increased gap between icons */
+    margin-bottom: 30px; /* More space below icons */
+    width: 100%;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Slightly larger icons */
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f2f2f2; /* Light background for icons */
+    color: var(--bg-white); /* Icon color, will be overridden by specific color */
+    font-size: 1.6em; /* Larger icon size */
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1); /* Subtle shadow for icons */
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Specific colors for social icons */
+.social-icon.twitter { background-color: var(--twitter-blue); }
+.social-icon.youtube { background-color: var(--youtube-red); }
+.social-icon.instagram { background-color: var(--instagram-purple); }
+.social-icon.facebook { background-color: var(--facebook-blue); }
+
+.social-icon:hover {
+    transform: translateY(-4px); /* More pronounced lift effect */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+    opacity: 1; /* Ensure full opacity */
+}
+
+.follow-button {
+    background-color: var(--yellow-accent);
+    color: var(--text-dark); /* Dark text on yellow button */
+    border: none;
+    padding: 14px 30px; /* More padding for a bolder button */
+    border-radius: var(--button-border-radius); /* Rounded corners */
+    cursor: pointer;
+    font-size: 1em; /* Slightly larger font */
+    font-weight: 700; /* Bold as in the image */
+    letter-spacing: 0.5px; /* Slight letter spacing */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    width: auto;
+    align-self: center; /* Center the button in the card */
+    white-space: nowrap; /* Prevent text wrapping */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Subtle shadow for button */
+}
+
+.follow-button:hover {
+    background-color: #E6C200; /* Slightly darker yellow */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Enhanced shadow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+        gap: 25px;
+    }
+    .info-card {
+        width: 100%; /* Cards take full width on small screens */
+        min-width: unset; /* Remove min-width override */
+        max-width: 400px; /* Control max width when stacked */
+    }
+    .card-content {
+        padding: 20px 15px;
+    }
+    .contact-card .card-content p {
+        font-size: 0.9em;
+    }
+    .social-prompt {
+        font-size: 0.9em;
+    }
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3em;
+    }
+    .follow-button {
+        padding: 10px 20px;
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    .card-container {
+        gap: 20px;
+    }
+    .info-card {
+        max-width: 350px;
+    }
+    .card-content {
+        padding: 15px 10px;
+    }
+    .contact-card .card-content p {
+        font-size: 0.85em;
+        gap: 8px;
+    }
+    .social-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2em;
+    }
+    .follow-button {
+        padding: 8px 15px;
+        font-size: 0.8em;
+    }
+}

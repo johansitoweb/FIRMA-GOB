@@ -1001,7 +1001,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* Para responsividad */
+    flex-wrap: wrap; 
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -1011,7 +1011,7 @@ body {
     color: white;
     padding: 12px 25px;
     font-weight: bold;
-    border-radius: 30px;
+    border-radius: 27px;
     border: none;
     white-space: nowrap; 
 }
