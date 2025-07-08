@@ -1016,9 +1016,9 @@ body {
     white-space: nowrap; 
 }
 
-.nav-buttons-container button:hover {
+/* .nav-buttons-container button:hover {
     background-color: var(--button-hover-blue);
-}
+} */
 
 .digital-transformation-intro{
     text-align: center;
@@ -1084,7 +1084,7 @@ body {
 .search-box {
     display: flex;
     border: 1px solid var(--card-border-color);
-    border-radius: 5px;
+    border-radius: 12px;
     overflow: hidden;
     height: 38px; /* Altura fija para alineación */
 }
@@ -1165,3 +1165,4 @@ body {
 .bottom-nav ul li a:hover::after {
     width: 100%;
 }
+

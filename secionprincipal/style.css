@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #002266; /* Dark blue background */
+    color: #fff; /* White text for headings and subheadings */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    overflow-x: hidden; /* Prevent horizontal scrollbar from carousel overflow */
+}
+
+.institutions-section {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 1200px; /* Max width for the whole section */
+    width: 100%;
+}
+
+.subheading {
+    font-size: 0.9em;
+    font-weight: normal;
+    margin-bottom: 5px;
+    letter-spacing: 0.05em;
+    color: #b0c4de; /* Lighter shade for subheading */
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    /* Max-width to control the visible area of the carousel */
+    max-width: 900px; /* Adjust this to control how many logos are fully visible */
+    margin: 0 auto; /* Center the carousel */
+}
+
+.carousel-arrow {
+    background: none;
+    border: none;
+    font-size: 3.5em; /* Larger arrows */
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 0 15px;
+    outline: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.left-arrow {
+    left: -60px; /* Position arrows outside the main carousel content */
+}
+
+.right-arrow {
+    right: -60px; /* Position arrows outside the main carousel content */
+}
+
+.carousel-arrow:hover {
+    color: #ccc;
+}
+
+.carousel-wrapper {
+    flex-grow: 1;
+    overflow: hidden; /* This is crucial to hide items outside the visible area */
+    border-radius: 10px; /* If you want a subtle border on the wrapper itself */
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+    padding: 10px 0; /* Some padding if items are close to wrapper edges */
+}
+
+.carousel-item {
+    flex-shrink: 0; /* Prevent items from shrinking */
+    width: calc(20% - 20px); /* 5 items visible (100% / 5 = 20%) minus margin */
+    margin: 0 10px; /* Space between items */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-circle {
+    width: 130px; /* Size of the circular container */
+    height: 130px;
+    border-radius: 50%; /* Makes it a circle */
+    background-color: #fff; /* White background for the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    overflow: hidden; /* Ensure image stays within circle */
+}
+
+.logo-circle img {
+    max-width: 80%; /* Adjust image size within the circle */
+    max-height: 80%;
+    object-fit: contain; /* Ensure image scales correctly without cropping */
+}
+
+/* Responsive adjustments for carousel items */
+@media (max-width: 1024px) {
+    .carousel-item {
+        width: calc(25% - 20px); /* 4 items */
+    }
+    .left-arrow { left: -40px; }
+    .right-arrow { right: -40px; }
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        width: calc(33.333% - 20px); /* 3 items */
+    }
+    .logo-circle {
+        width: 100px;
+        height: 100px;
+    }
+    .left-arrow { left: -20px; }
+    .right-arrow { right: -20px; }
+    .carousel-arrow {
+        font-size: 3em;
+    }
+    .section-title {
+        font-size: 1.8em;
+    }
+    .subheading {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        width: calc(50% - 20px); /* 2 items */
+    }
+    .logo-circle {
+        width: 80px;
+        height: 80px;
+    }
+    .left-arrow { left: -10px; }
+    .right-arrow { right: -10px; }
+    .carousel-arrow {
+        font-size: 2.5em;
+    }
+    .section-title {
+        font-size: 1.5em;
+    }
+    .subheading {
+        font-size: 0.7em;
+    }
+}

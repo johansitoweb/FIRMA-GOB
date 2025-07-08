@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #002266; /* Dark blue background */
+    color: #333;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 900px; /* Ajusta el ancho máximo del contenedor principal */
+    position: relative;
+    padding: 40px 0; /* Espacio vertical para las flechas */
+}
+
+.carousel-wrapper {
+    flex-grow: 1;
+    overflow: hidden; /* Importante para ocultar los slides no activos */
+    border-radius: 20px; /* Aplica el radio de borde aquí para el contenedor de los slides */
+    background-color: #fff; /* Fondo blanco para la tarjeta visible */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para la tarjeta */
+    position: relative; /* Para el posicionamiento absoluto de los slides si se usara */
+    min-height: 250px; /* Asegura una altura mínima para la tarjeta */
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animación de desplazamiento */
+    width: 100%; /* El contenedor de los slides ocupa el 100% del wrapper */
+}
+
+.carousel-slide {
+    flex-shrink: 0; /* Previene que el slide se encoja */
+    width: 100%; /* Cada slide ocupa el 100% del carousel-content cuando está activo */
+    padding: 30px; /* Padding interno de cada tarjeta */
+    box-sizing: border-box;
+    /* border-radius: 20px; Ya aplicado en .carousel-wrapper, a menos que quieras sombra por slide */
+    /* background-color: #fff; Ya aplicado en .carousel-wrapper */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); Ya aplicado en .carousel-wrapper */
+}
+
+.logo-text-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.logo span {
+    font-size: 0.7em;
+    font-weight: bold;
+    color: #6a0dad;
+    line-height: 1.2;
+}
+
+.text-content {
+    flex-grow: 1;
+}
+
+.text-content h3 {
+    color: #002266;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.text-content p {
+    color: #555;
+    line-height: 1.4;
+    font-size: 0.85em;
+    margin-bottom: 0;
+}
+
+.carousel-arrow {
+    background: none;
+    border: none;
+    font-size: 4em;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 0 15px;
+    outline: none;
+}
+
+.left-arrow {
+    left: -50px;
+}
+
+.right-arrow {
+    right: -50px;
+}
+
+.carousel-arrow:hover {
+    color: #ccc;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .carousel-arrow {
+        font-size: 3em;
+        padding: 0 10px;
+    }
+    .left-arrow {
+        left: -30px;
+    }
+    .right-arrow {
+        right: -30px;
+    }
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+    .logo span {
+        font-size: 0.6em;
+    }
+    .text-content h3 {
+        font-size: 1em;
+    }
+    .text-content p {
+        font-size: 0.75em;
+    }
+    .carousel-slide {
+        padding: 20px;
+    }
+    .logo-text-container {
+        gap: 10px;
+    }
+}
