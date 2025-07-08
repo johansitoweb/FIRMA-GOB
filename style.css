@@ -1035,15 +1035,15 @@ body {
     color: rgb(0, 0, 0);
     padding: 8px 20px;
     font-size: 0.8em;
-    text-align: right;
+    text-align: reignt;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: reignt;
     gap: 5px;
 }
 
 .top-bar a {
-    color: #1100ff; /* Amarillo para el enlace */
+    color: #1100ff; 
     text-decoration: none;
 }
 
@@ -1089,7 +1089,7 @@ body {
 }
 
 .search-box input {
-    border: none;
+    
     padding: 8px 10px;
     outline: none;
     font-size: 0.9em;
@@ -1097,10 +1097,11 @@ body {
 }
 
 .search-box button {
-    background-color: var(--primary-blue);
+    background-color: red;
     color: white;
     padding: 0 12px;
-    border-radius: 0;
+    border-radius: 50%;
+    border: none;
     height: 100%;
 }
 
