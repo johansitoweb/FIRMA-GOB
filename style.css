@@ -1007,12 +1007,13 @@ body {
 }
 
 .nav-buttons-container button {
-    background-color: var(--dark-blue-bg);
-    color: var(--text-color-light);
+    background-color: #003579;
+    color: white;
     padding: 12px 25px;
     font-weight: bold;
     border-radius: 30px;
-    white-space: nowrap; /* Evita que el texto se rompa */
+    border: none;
+    white-space: nowrap; 
 }
 
 .nav-buttons-container button:hover {
