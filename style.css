@@ -19,7 +19,7 @@ header {
 }
 
 .top-bar {
-    background-color: var(--dark-blue);
+   
     color: white;
     font-size: 0.8em;
     padding: 5px 20px;
@@ -34,7 +34,7 @@ header {
 }
 
 .main-nav .logo img {
-    height: 40px; /* Ajusta según el tamaño real de tus logos */
+    height: 70px; /* Ajusta según el tamaño real de tus logos */
     margin-right: 10px;
 }
 
@@ -146,13 +146,13 @@ header {
 }
 
 .digital-transformation h2 {
-    color: var(--text-color);
+   
     font-size: 1.8em;
     margin-bottom: 10px;
 }
 
 .digital-transformation h3 {
-    color: var(--primary-blue);
+    
     font-size: 1.2em;
     margin-top: 0;
     cursor: pointer; /* Indicar que es interactivo */
@@ -257,7 +257,7 @@ header {
 
 /* Estilos para la sección "¿Por qué Firma GOB?" */
 .why-firmagob-section {
-    background-color: var(--dark-blue); /* El azul oscuro del fondo */
+   
     color: white;
     padding: 80px 20px;
     text-align: center;
@@ -285,7 +285,7 @@ header {
 }
 
 .feature-card {
-    background-color: #004d80; /* Un azul ligeramente más claro que el fondo */
+    background-color: #003579; /* Un azul ligeramente más claro que el fondo */
     border-radius: 10px;
     padding: 25px;
     text-align: center;
@@ -495,7 +495,13 @@ header {
 .logo-group .logo-ogtic { height: 35px; }
 
 .search-contact button i { margin-right: 5px; }
-.contact-button { background-color: #007bff; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; margin-left: 5px; }
+.contact-button { background-color: white; 
+    color: rgb(26, 10, 247); 
+    border: none;
+     padding: 8px 12px; 
+     border-radius: 12px; 
+     cursor: pointer; 
+     margin-left: 5px; }
 .sub-nav ul li a i { margin-left: 5px; }
 
 .hero-firma-logo {
@@ -981,4 +987,179 @@ body {
     .decorative-stars-integration {
         font-size: 1em; /* Estrellas más pequeñas en móvil */
     }
+}
+
+/* -------------------- Navegación debajo del Hero -------------------- */
+.hero-bottom-nav {
+    background-color: white;
+    padding: 20px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.nav-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Para responsividad */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-buttons-container button {
+    background-color: var(--dark-blue-bg);
+    color: var(--text-color-light);
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 30px;
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+.nav-buttons-container button:hover {
+    background-color: var(--button-hover-blue);
+}
+
+.digital-transformation-intro{
+    text-align: center;
+}
+
+
+/* -------------------- Header (Adaptado de image_63e7e5.jpg) -------------------- */
+.main-header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.top-bar {
+    background-color: var(--dark-blue-bg);
+    color: white;
+    padding: 8px 20px;
+    font-size: 0.8em;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+}
+
+.top-bar a {
+    color: #ffd700; /* Amarillo para el enlace */
+    text-decoration: none;
+}
+
+.top-bar a:hover {
+    text-decoration: underline;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-firma-gob-header {
+    height: 35px; /* Ajusta el tamaño */
+}
+
+.logo-ogtic-header {
+    height: 30px; /* Ajusta el tamaño */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-box {
+    display: flex;
+    border: 1px solid var(--card-border-color);
+    border-radius: 5px;
+    overflow: hidden;
+    height: 38px; /* Altura fija para alineación */
+}
+
+.search-box input {
+    border: none;
+    padding: 8px 10px;
+    outline: none;
+    font-size: 0.9em;
+    flex-grow: 1;
+}
+
+.search-box button {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 0 12px;
+    border-radius: 0;
+    height: 100%;
+}
+
+.grid-button {
+    background-color: white;
+    color: var(--text-color-dark);
+    border: 1px solid var(--card-border-color);
+    padding: 8px 12px;
+}
+
+.grid-button i {
+    font-size: 1.1em;
+}
+
+.contact-button {
+    background-color: var(--primary-blue);
+    color: var(--text-color-light);
+    padding: 8px 15px;
+}
+
+.bottom-nav {
+    background-color: white;
+    border-top: 1px solid var(--card-border-color);
+    padding: 10px 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.bottom-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.bottom-nav ul li a {
+    color: var(--header-link-color);
+    font-weight: bold;
+    padding: 5px 0;
+    position: relative;
+}
+
+.bottom-nav ul li a i {
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+.bottom-nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-blue);
+    transition: width 0.3s ease;
+}
+
+.bottom-nav ul li a:hover::after {
+    width: 100%;
 }
