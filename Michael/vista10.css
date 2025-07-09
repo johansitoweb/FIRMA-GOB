@@ -115,6 +115,7 @@ main {
             margin-bottom: 15px;  
             position: relative;
             left: 400px;
+            top: -30px;
         }
         
         .service-title {
