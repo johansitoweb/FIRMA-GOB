@@ -115,6 +115,7 @@ main {
             margin-bottom: 15px;  
             position: relative;
             left: 400px;
+            top: -30px;
         }
         
         .service-title {
@@ -642,18 +643,15 @@ main {
         padding: 1rem;
     }
     
-
     .service-content {
         flex-direction: column;
     }
     
- 
     .footer-content {
         grid-template-columns: 1fr;
         gap: 20px;
     }
     
-   
     .nav-links {
         display: none;
     }
