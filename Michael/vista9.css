@@ -121,7 +121,17 @@ main {
         .service-title {
             font-size: 36px;
             margin-bottom: 20px;
-            color: #212529;
+            color: #003579;
+        }
+        .Mostrando_numero{
+            display: flex;
+            width: 90%; 
+            height:3rem; 
+            background-color: #A6D2FF21;
+            border-radius: 10px;
+            padding: 10px;
+            position: relative;
+            left: 30px;
         }
         
         .service-subtitle {
@@ -380,7 +390,7 @@ main {
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin-bottom: 40px;
-            background-color: #5EAEFF;
+            background-color:white;
             padding: 4rem;
         }
         
@@ -389,6 +399,7 @@ main {
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         .imagen_service_div{
             width: 130px; 
@@ -580,10 +591,9 @@ main {
         }
 
         .demas_service{
-            background-color: #5496D9;
             position: relative;
             top: 10px;
-            color: white;
+            color:#5EAEFF;
 
         }
         .view-all {
