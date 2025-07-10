@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #002266; /* Dark blue background */
+    background-color: #002266; 
     color: #333;
 }
 
@@ -13,35 +13,32 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 900px; /* Ajusta el ancho máximo del contenedor principal */
+    max-width: 900px; 
     position: relative;
-    padding: 40px 0; /* Espacio vertical para las flechas */
+    padding: 40px 0; 
 }
 
 .carousel-wrapper {
     flex-grow: 1;
-    overflow: hidden; /* Importante para ocultar los slides no activos */
-    border-radius: 20px; /* Aplica el radio de borde aquí para el contenedor de los slides */
-    background-color: #fff; /* Fondo blanco para la tarjeta visible */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para la tarjeta */
-    position: relative; /* Para el posicionamiento absoluto de los slides si se usara */
-    min-height: 250px; /* Asegura una altura mínima para la tarjeta */
+    overflow: hidden; 
+    border-radius: 20px; 
+    background-color: #fff; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+    min-height: 250px; 
 }
 
 .carousel-content {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Animación de desplazamiento */
-    width: 100%; /* El contenedor de los slides ocupa el 100% del wrapper */
+    transition: transform 0.5s ease-in-out; 
+    width: 100%; 
 }
 
 .carousel-slide {
-    flex-shrink: 0; /* Previene que el slide se encoja */
-    width: 100%; /* Cada slide ocupa el 100% del carousel-content cuando está activo */
-    padding: 30px; /* Padding interno de cada tarjeta */
+    flex-shrink: 0; 
+    width: 100%; 
+    padding: 30px; 
     box-sizing: border-box;
-    /* border-radius: 20px; Ya aplicado en .carousel-wrapper, a menos que quieras sombra por slide */
-    /* background-color: #fff; Ya aplicado en .carousel-wrapper */
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); Ya aplicado en .carousel-wrapper */
 }
 
 .logo-text-container {

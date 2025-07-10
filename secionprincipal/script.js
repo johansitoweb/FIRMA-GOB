@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const leftArrow = document.querySelector('.left-arrow');
     const rightArrow = document.querySelector('.right-arrow');
 
-    let currentScrollPosition = 0; // Tracks the current scroll position
-    let itemWidth = 0; // Will store the calculated width of a single item including margin
-    let itemsInView = 0; // Number of items visible at once
+    let currentScrollPosition = 0; 
+    let itemWidth = 0; 
+    let itemsInView = 0; 
 
     const calculateItemProperties = () => {
         if (carouselItems.length > 0) {
@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const carouselWrapperWidth = carouselContent.parentElement.offsetWidth;
             itemsInView = Math.floor(carouselWrapperWidth / itemWidth);
-            if (itemsInView < 1) itemsInView = 1; // Ensure at least 1 item is always in view
+            if (itemsInView < 1) itemsInView = 1; 
         }
     };
 
     const updateCarouselPosition = () => {
-        // Ensure currentScrollPosition doesn't exceed bounds
+        
         const maxScrollPosition = Math.max(0, carouselItems.length - itemsInView);
         if (currentScrollPosition > maxScrollPosition) {
             currentScrollPosition = maxScrollPosition;
@@ -35,38 +35,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextSlide = () => {
         const maxScrollPosition = Math.max(0, carouselItems.length - itemsInView);
         if (currentScrollPosition < maxScrollPosition) {
-            currentScrollPosition += itemsInView; // Move by a full view
+            currentScrollPosition += itemsInView; 
             if (currentScrollPosition > maxScrollPosition) {
-                currentScrollPosition = maxScrollPosition; // Snap to end if overshot
+                currentScrollPosition = maxScrollPosition; 
             }
         } else {
-            currentScrollPosition = 0; // Loop back to start
+            currentScrollPosition = 0; 
         }
         updateCarouselPosition();
     };
 
     const prevSlide = () => {
         if (currentScrollPosition > 0) {
-            currentScrollPosition -= itemsInView; // Move back by a full view
+            currentScrollPosition -= itemsInView; 
             if (currentScrollPosition < 0) {
-                currentScrollPosition = 0; // Snap to start if overshot
+                currentScrollPosition = 0; 
             }
         } else {
             const maxScrollPosition = Math.max(0, carouselItems.length - itemsInView);
-            currentScrollPosition = maxScrollPosition; // Loop to end
+            currentScrollPosition = maxScrollPosition; 
         }
         updateCarouselPosition();
     };
 
-    // Initial setup
+   
     calculateItemProperties();
     updateCarouselPosition();
 
-    // Event listeners for navigation arrows
+   
     rightArrow.addEventListener('click', nextSlide);
     leftArrow.addEventListener('click', prevSlide);
 
-    // Recalculate on window resize to adjust visible items and position
+    
     window.addEventListener('resize', () => {
         calculateItemProperties();
         updateCarouselPosition();

@@ -1,19 +1,19 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #002266; /* Dark blue background */
-    color: #fff; /* White text for headings and subheadings */
+    background-color: #002266; 
+    color: #fff; 
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Full viewport height */
-    overflow-x: hidden; /* Prevent horizontal scrollbar from carousel overflow */
+    min-height: 100vh; 
+    overflow-x: hidden; 
 }
 
 .institutions-section {
     text-align: center;
     padding: 50px 20px;
-    max-width: 1200px; /* Max width for the whole section */
+    max-width: 1200px; 
     width: 100%;
 }
 
@@ -22,7 +22,7 @@ body {
     font-weight: normal;
     margin-bottom: 5px;
     letter-spacing: 0.05em;
-    color: #b0c4de; /* Lighter shade for subheading */
+    color: #b0c4de; 
     text-transform: uppercase;
 }
 
@@ -40,15 +40,15 @@ body {
     justify-content: center;
     position: relative;
     width: 100%;
-    /* Max-width to control the visible area of the carousel */
-    max-width: 900px; /* Adjust this to control how many logos are fully visible */
-    margin: 0 auto; /* Center the carousel */
+    
+    max-width: 900px; 
+    margin: 0 auto;
 }
 
 .carousel-arrow {
     background: none;
     border: none;
-    font-size: 3.5em; /* Larger arrows */
+    font-size: 3.5em; 
     color: #fff;
     cursor: pointer;
     position: absolute;
@@ -61,11 +61,11 @@ body {
 }
 
 .left-arrow {
-    left: -60px; /* Position arrows outside the main carousel content */
+    left: -60px; 
 }
 
 .right-arrow {
-    right: -60px; /* Position arrows outside the main carousel content */
+    right: -60px; 
 }
 
 .carousel-arrow:hover {
@@ -74,47 +74,47 @@ body {
 
 .carousel-wrapper {
     flex-grow: 1;
-    overflow: hidden; /* This is crucial to hide items outside the visible area */
-    border-radius: 10px; /* If you want a subtle border on the wrapper itself */
+    overflow: hidden; 
+    border-radius: 10px; 
 }
 
 .carousel-content {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
-    padding: 10px 0; /* Some padding if items are close to wrapper edges */
+    transition: transform 0.5s ease-in-out; 
+    padding: 10px 0; 
 }
 
 .carousel-item {
-    flex-shrink: 0; /* Prevent items from shrinking */
-    width: calc(20% - 20px); /* 5 items visible (100% / 5 = 20%) minus margin */
-    margin: 0 10px; /* Space between items */
+    flex-shrink: 0; 
+    width: calc(20% - 20px); 
+    margin: 0 10px; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .logo-circle {
-    width: 130px; /* Size of the circular container */
+    width: 130px; 
     height: 130px;
-    border-radius: 50%; /* Makes it a circle */
-    background-color: #fff; /* White background for the circle */
+    border-radius: 50%; 
+    background-color: #fff; 
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    overflow: hidden; /* Ensure image stays within circle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    overflow: hidden; 
 }
 
 .logo-circle img {
-    max-width: 80%; /* Adjust image size within the circle */
+    max-width: 80%; 
     max-height: 80%;
-    object-fit: contain; /* Ensure image scales correctly without cropping */
+    object-fit: contain;
 }
 
-/* Responsive adjustments for carousel items */
+
 @media (max-width: 1024px) {
     .carousel-item {
-        width: calc(25% - 20px); /* 4 items */
+        width: calc(25% - 20px); 
     }
     .left-arrow { left: -40px; }
     .right-arrow { right: -40px; }
@@ -122,7 +122,7 @@ body {
 
 @media (max-width: 768px) {
     .carousel-item {
-        width: calc(33.333% - 20px); /* 3 items */
+        width: calc(33.333% - 20px); 
     }
     .logo-circle {
         width: 100px;
@@ -143,7 +143,7 @@ body {
 
 @media (max-width: 480px) {
     .carousel-item {
-        width: calc(50% - 20px); /* 2 items */
+        width: calc(50% - 20px); 
     }
     .logo-circle {
         width: 80px;
