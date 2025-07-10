@@ -1,0 +1,834 @@
+:root {
+    --white-bg: #FFFFFF;
+    --dark-text: #333333;
+    --blue-navbar-bg: #0C2E5D;
+    --blue-links: #007bff;
+    --red-button: #E30000;
+    --light-grey-border: #e0e0e0;
+    --white-text: #FFFFFF;
+    --section-subtitle-color: #666666;
+    --green-check: #4CAF50;
+    --card-border-color: #E6E6E6;
+    --pagination-bg: #F8F9FA;
+    --footer-bottom-bg: #F8F9FA;
+    --light-blue-bg-info: #EBF5FF;
+    --light-border-dark: #1E4675;
+    --light-green-bg: #E6F7E6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    width: 100%;
+    border-bottom: 1px solid var(--light-grey-border);
+}
+
+.top-navbar {
+    background-color: var(--white-bg);
+    color: var(--dark-text);
+    padding: 10px 0;
+    font-size: 0.85em;
+}
+
+.top-navbar .container {
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.top-navbar .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top-navbar .flag-icon {
+    width: 20px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.top-navbar span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.top-navbar .navbar-link.how-we-know {
+    color: var(--blue-links);
+    text-decoration: underline;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    white-space: nowrap;
+}
+.top-navbar .navbar-link.how-we-know i {
+    font-size: 0.7em;
+}
+
+.main-navbar {
+    background-color: var(--blue-navbar-bg);
+    color: var(--white-text);
+    padding: 15px 0;
+    border-bottom: none;
+}
+
+.main-navbar .container {
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.main-navbar .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.main-navbar .firma-gob-logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.main-navbar .ogtic-logo {
+    max-width: 80px;
+    height: auto;
+}
+
+.main-navbar .navbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.main-navbar .search-bar {
+    display: flex;
+    background-color: var(--white-bg);
+    border-radius: 27px;
+    overflow: hidden;
+    max-width: 400px;
+    width: 100%;
+}
+
+.main-navbar .search-bar input {
+    border: none;
+    padding: 8px 15px;
+    flex-grow: 1;
+    font-size: 0.9em;
+    outline: none;
+}
+
+.main-navbar .search-bar button {
+    background-color: var(--red-button);
+    border: none;
+    color: var(--white-text);
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    border-radius:  50px ;
+}
+
+
+
+.main-navbar .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.main-navbar .nav-icon-link {
+    color: var(--white-text);
+    font-size: 1.3em;
+    text-decoration: none;
+    padding: 0 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-navbar .nav-icon-link + .nav-icon-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 70%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.main-navbar .contact-button {
+    background-color: var(--white-bg);
+    color: var(--blue-links);
+    padding: 8px 15px;
+    border-radius: 27px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+    position: relative;
+    margin-left: 15px;
+}
+
+.main-navbar .contact-button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 70%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.main-navbar .contact-button:hover {
+    background-color: #f0f0f0;
+    color: var(--blue-links);
+}
+
+.bottom-navbar {
+    background-color: var(--white-bg);
+    color: var(--dark-text);
+    padding: 10px 0;
+    font-size: 0.95em;
+    border-top: 1px solid var(--light-grey-border);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.bottom-navbar .container {
+    justify-content: flex-start;
+}
+
+.bottom-navbar .navbar-links {
+    display: flex;
+    gap: 30px;
+}
+
+.bottom-navbar .navbar-link {
+    color: var(--dark-text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.bottom-navbar .navbar-link:hover {
+    color: var(--blue-links);
+}
+
+.bottom-navbar .navbar-link.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bottom-navbar .navbar-link.dropdown-toggle i {
+    font-size: 0.7em;
+}
+
+.service-detail-section {
+    padding: 60px 0;
+    background-color: var(--white-bg);
+    color: var(--blue-links);
+}
+
+.service-detail-section .container {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+}
+
+.service-button-wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-breadcrumb-btn {
+    background-color: var(--white-bg);
+    border: 1px solid var(--blue-links);
+    color: var(--blue-links);
+    padding: 8px 18px;
+    border-radius: 27px;
+    font-size: 0.9em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.etiqueta-btn {
+    background-color: var(--blue-links);
+    color: var(--white-text);
+    border: 1px solid var(--blue-links);
+}
+
+.etiqueta-btn:hover {
+    background-color: #0056b3;
+    color: var(--white-text);
+}
+
+.detail-title-bg-blue {
+    font-size: 2em;
+    color: var(--blue-links);
+    padding: 0;
+    margin-bottom: 5px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.detail-subtitle.centered-text {
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: var(--blue-links);
+}
+
+.detail-tag {
+    background-color: var(--blue-links);
+    color: var(--white-text);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.75em;
+    margin-left: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.detail-features-top {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.feature-item-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.95em;
+    color: var(--blue-links);
+    gap: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.feature-item-top img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.detail-description {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 900px;
+    color: var(--blue-links);
+}
+
+.detail-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.benefits-section h3 {
+    font-size: 1.4em;
+    color: var(--white-text);
+    background-color: #28a745;
+    padding: 10px 20px;
+    border-radius: 27px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+
+
+.benefits-section ul,
+.info-adicional-card ul {
+    list-style: none;
+}
+
+.benefits-section ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: var(--dark-text);
+}
+
+.benefits-section .check-icon {
+    color: var(--green-check);
+    font-size: 1.2em;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.info-adicional-card {
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid rgba(3, 12, 22, 0.2);
+}
+
+.info-adicional-card h4 {
+    font-size: 1.1em;
+    color: var(--blue-links);
+    margin-bottom: 15px;
+}
+
+.info-adicional-card .info-icon-text {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-adicional-card .info-adicional-icon {
+    width: 50px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.info-adicional-card p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: var(--dark-text);
+}
+
+.info-adicional-card ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    color: var(--dark-text);
+}
+
+.info-adicional-card .dot-icon {
+    font-size: 0.5em;
+    color: var(--blue-links);
+    margin-top: 7px;
+}
+
+.info-adicional-card .more-info-link {
+    color: var(--blue-links);
+    font-size: 0.9em;
+    font-weight: bold;
+    text-decoration: underline;
+    display: block;
+    margin-top: 20px;
+}
+
+.requirements-documents-group {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.requirements-section {
+    flex: 1 1 55%;
+    min-width: 300px;
+}
+
+.documents-section {
+    flex: 1 1 35%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.requirement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.requirement-item .req-number {
+    background-color: var(--blue-links);
+    color: var(--white-text);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9em;
+    flex-shrink: 0;
+}
+
+.requirement-item p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: var(--dark-text);
+}
+
+.requirement-item p a {
+    color: var(--blue-links);
+    text-decoration: underline;
+}
+
+.document-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid var(--light-grey-border);
+    border-radius: 10px;
+    padding: 15px 20px;
+    background-color: var(--white-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    max-width: 500px;
+    width: 100%;
+}
+
+.doc-preview {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.doc-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.doc-name {
+    font-weight: bold;
+    color: var(--dark-text);
+    font-size: 0.95em;
+}
+
+.doc-size {
+    font-size: 0.8em;
+    color: var(--section-subtitle-color);
+}
+
+.download-button {
+    background-color: var(--red-button);
+    color: var(--white-text);
+    padding: 8px 15px;
+    border-radius: 27px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #c00;
+}
+
+.solicitar-servicio-btn {
+    background-color: var(--white-bg);
+    color: var(--blue-links);
+    border: 1px solid var(--blue-links);
+    padding: 12px 30px;
+    border-radius: 27px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 40px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    width: 100%;
+}
+
+.solicitar-servicio-btn:hover {
+    background-color: var(--blue-links);
+    color: var(--white-text);
+}
+
+.floating-buttons {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.floating-buttons .scroll-up-btn {
+    background-color: var(--blue-links);
+    color: var(--white-text);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.floating-buttons .scroll-up-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 1024px) {
+    .detail-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .requirements-documents-group {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .requirements-section,
+    .documents-section {
+        flex: none;
+        width: 100%;
+        min-width: unset;
+    }
+    .solicitar-servicio-btn {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .top-navbar .container,
+    .main-navbar .container,
+    .bottom-navbar .container {
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    .top-navbar .navbar-left {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .main-navbar .navbar-left {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-navbar .navbar-center {
+        width: 100%;
+        max-width: none;
+    }
+    .main-navbar .search-bar {
+        width: 100%;
+    }
+
+    .main-navbar .navbar-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .main-navbar .nav-icon-link::before,
+    .main-navbar .contact-button::before {
+        content: none;
+    }
+    .main-navbar .nav-icon-link, .main-navbar .contact-button {
+        padding: 5px 10px;
+        margin-left: 0;
+    }
+    .main-navbar .contact-button {
+        border: 1px solid var(--blue-links);
+    }
+
+    .bottom-navbar .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .service-detail-section .container {
+        padding: 0 15px;
+    }
+    .detail-features-top {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    .feature-item-top {
+        text-align: center;
+    }
+    .detail-tag {
+        margin-left: 0;
+        display: block;
+        margin-top: 10px;
+    }
+    .detail-content-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .documents-section .document-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        max-width: 100%;
+        padding: 20px;
+    }
+    .doc-info {
+        align-items: flex-start;
+    }
+    .download-button {
+        width: 100%;
+        justify-content: center;
+    }
+    .solicitar-servicio-btn {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .detail-title-bg-blue,
+    .detail-subtitle.centered-text {
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-navbar {
+        font-size: 0.75em;
+        padding: 5px 0;
+    }
+    .top-navbar .flag-icon {
+        width: 18px;
+    }
+
+    .main-navbar {
+        padding: 10px 0;
+    }
+    .main-navbar .firma-gob-logo {
+        max-width: 100px;
+    }
+    .main-navbar .ogtic-logo {
+        max-width: 60px;
+    }
+    .main-navbar .search-bar input {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+    .main-navbar .search-bar button {
+        font-size: 0.9em;
+        padding: 6px 10px;
+    }
+    .main-navbar .nav-icon-link {
+        font-size: 1.1em;
+    }
+    .main-navbar .contact-button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    .bottom-navbar {
+        font-size: 0.85em;
+        padding: 8px 0;
+    }
+
+    .detail-title-bg-blue {
+        font-size: 1.6em;
+        padding: 0;
+    }
+    .detail-tag {
+        font-size: 0.7em;
+    }
+    .detail-subtitle.centered-text {
+        font-size: 0.8em;
+    }
+    .feature-item-top {
+        font-size: 0.85em;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .feature-item-top img {
+        margin-bottom: 5px;
+    }
+    .detail-description {
+        font-size: 0.9em;
+    }
+
+    .benefits-section h3, .requirements-section h3, .documents-section h3 {
+        font-size: 1.2em;
+    }
+    .benefits-section ul li, .info-adicional-card ul li, .requirement-item p {
+        font-size: 0.9em;
+    }
+    .info-adicional-card h4 {
+        font-size: 1em;
+    }
+    .info-adicional-card .info-icon-text p {
+        font-size: 0.8em;
+    }
+    .download-button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+    .solicitar-servicio-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
