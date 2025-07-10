@@ -1,0 +1,311 @@
+:root {
+    --white-bg: #FFFFFF;
+    --dark-text: #333333;
+    --blue-navbar-bg: #0C2E5D;
+    --blue-links: #007bff;
+    --red-button: #E30000;
+    --light-grey-border: #e0e0e0;
+    --white-text: #FFFFFF; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.navbar {
+    width: 100%;
+    border-bottom: 1px solid var(--light-grey-border);
+}
+
+.top-navbar {
+    background-color: var(--white-bg);
+    color: var(--dark-text);
+    padding: 10px 0;
+    font-size: 0.85em;
+}
+
+.top-navbar .container {
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.top-navbar .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top-navbar .flag-icon {
+    width: 20px;
+    height: auto;
+}
+
+.top-navbar .navbar-link.how-we-know {
+    color: var(--blue-links);
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+.main-navbar {
+    background-color: var(--blue-navbar-bg);
+    color: var(--white-text);
+    padding: 15px 0;
+    border-bottom: none;
+}
+
+.main-navbar .container {
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.main-navbar .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.main-navbar .firma-gob-logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.main-navbar .ogtic-logo {
+    max-width: 80px;
+    height: auto;
+}
+
+.main-navbar .navbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.main-navbar .search-bar {
+    display: flex;
+    background-color: var(--white-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 400px;
+    width: 100%;
+}
+
+.main-navbar .search-bar input {
+    border: none;
+    padding: 8px 15px;
+    flex-grow: 1;
+    font-size: 0.9em;
+    outline: none;
+}
+
+.main-navbar .search-bar button {
+    background-color: var(--red-button);
+    border: none;
+    color: var(--white-text);
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    border-radius: 50px; /* Red button border-radius */
+}
+
+.main-navbar .search-bar button:hover {
+    background-color: #c00;
+}
+
+.main-navbar .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.main-navbar .nav-icon-link {
+    color: var(--white-text);
+    font-size: 1.3em;
+    text-decoration: none;
+    padding: 0 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-navbar .nav-icon-link + .nav-icon-link::before,
+.main-navbar .contact-button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 70%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.main-navbar .nav-icon-link:first-child::before {
+    content: none;
+}
+
+.main-navbar .contact-button {
+    background-color:white; 
+    color: var(--white-text);
+    padding: 8px 15px;
+    border-radius: 27px; 
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    position: relative;
+    color: #007bff;
+}
+
+
+
+.bottom-navbar {
+    background-color: var(--white-bg);
+    color: var(--dark-text);
+    padding: 10px 0;
+    font-size: 0.95em;
+    border-top: 1px solid var(--light-grey-border);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.bottom-navbar .container {
+    justify-content: flex-start;
+}
+
+.bottom-navbar .navbar-links {
+    display: flex;
+    gap: 30px;
+}
+
+.bottom-navbar .navbar-link {
+    color: var(--dark-text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.bottom-navbar .navbar-link:hover {
+    color: var(--blue-links);
+}
+
+.bottom-navbar .navbar-link.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .top-navbar .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .top-navbar .navbar-left {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .main-navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-navbar .navbar-left {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-navbar .navbar-center {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .main-navbar .navbar-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .main-navbar .nav-icon-link::before,
+    .main-navbar .contact-button::before {
+        content: none;
+    }
+    .main-navbar .nav-icon-link, .main-navbar .contact-button {
+        padding: 5px 10px;
+    }
+
+    .bottom-navbar .container {
+        flex-direction: column;
+    }
+    .bottom-navbar .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-navbar {
+        padding: 8px 0;
+        font-size: 0.8em;
+    }
+
+    .main-navbar {
+        padding: 10px 0;
+    }
+
+    .main-navbar .firma-gob-logo {
+        max-width: 120px;
+    }
+
+    .main-navbar .ogtic-logo {
+        max-width: 70px;
+    }
+
+    .main-navbar .search-bar input,
+    .main-navbar .search-bar button {
+        padding: 6px 10px;
+        font-size: 0.85em;
+    }
+
+    .main-navbar .nav-icon-link {
+        font-size: 1.1em;
+    }
+
+    .main-navbar .contact-button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    .bottom-navbar {
+        padding: 8px 0;
+        font-size: 0.9em;
+    }
+}
