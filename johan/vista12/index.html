@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Servicio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="od.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>Solicitud de servicio</h1>
+                <p>Ambiente de prueba</p>
+            </div>
+            <button class="back-button">
+                <img src="3c706ae16f6df13449764633b36a3f780e49c408.png" alt="">REGRESAR
+            </button>
+        </header>
+
+        <main class="main-content">
+            <p class="required-fields-note">* Todos los campos marcados son obligatorios</p>
+
+            <form class="service-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre: <span>*</span></label>
+                        <input type="text" id="nombre" placeholder="Nombre Completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Dirección de correo electrónico: <span>*</span></label>
+                        <input type="email" id="email" placeholder="Correo Electrónico">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="institucion">Institución:</label>
+                        <input type="text" id="institucion" placeholder="Institución">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Número de teléfono: <span>*</span></label>
+                        <input type="tel" id="telefono" placeholder="Número de teléfono">
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" placeholder="Asunto"></textarea>
+                </div>
+
+                <p class="privacy-note">Tus datos personales se utilizarán para procesar la solicitud y apoyar tu experiencia en este sitio web como indica nuestra <a href="#">Política de Privacidad</a></p>
+
+                <div class="marketing-opt-in">
+                    <p class="tex-color">¿Deseas recibir información sobre las promociones de Firma GOB?</p>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="marketing">
+                        <span class="checkmark"></span>
+                        Marca esta casilla para dar tu consentimiento al tratamiento de datos personales con fines de marketing/ventas directas como indica nuestra <a href="#">Política de Privacidad</a>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-button">Enviar</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
